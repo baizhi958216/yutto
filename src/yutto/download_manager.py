@@ -257,6 +257,7 @@ class DownloadManager:
                     },
                     "banned_mirrors_pattern": args.banned_mirrors_pattern,
                     "danmaku_options": parse_danmaku_options(args),
+                    "json_output": args.json_output,
                 },
             )
             Logger.new_line()

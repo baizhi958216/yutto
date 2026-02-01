@@ -261,6 +261,7 @@ class DownloaderOptions(TypedDict):
     metadata_format: dict[str, str]
     banned_mirrors_pattern: str | None
     danmaku_options: DanmakuOptions
+    json_output: bool
 
 
 class FavouriteMetaData(TypedDict):

@@ -171,7 +171,7 @@ async def download_video_and_audio(
     # 为保证音频流和视频流尽可能并行，因此将两者混合一下～
     coroutines = list(xmerge(*coroutines_list))
     coroutines.insert(
-        0, CoroutineWrapper(show_progress(list(filter_none_values(buffers)), sum(filter_none_values(sizes))))
+        0, CoroutineWrapper(show_progress(list(filter_none_values(buffers)), sum(filter_none_values(sizes)), options["json_output"]))
     )
     Logger.info("开始下载……")
     await asyncio.gather(*coroutines)

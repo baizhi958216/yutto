@@ -58,6 +58,7 @@ class YuttoBasicSettings(BaseModel):
     login_strict: Annotated[bool, Field(False)]
     no_color: Annotated[bool, Field(False)]
     no_progress: Annotated[bool, Field(False)]
+    json_output: Annotated[bool, Field(False)]
     debug: Annotated[bool, Field(False)]
 
 

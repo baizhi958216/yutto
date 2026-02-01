@@ -203,6 +203,9 @@ def add_download_arguments(parser: argparse.ArgumentParser, settings: YuttoSetti
     group_basic.add_argument(
         "--no-progress", default=settings.basic.no_progress, action="store_true", help="不显示进度条"
     )
+    group_basic.add_argument(
+        "--json-output", default=settings.basic.json_output, action="store_true", help="使用 JSON 格式输出进度信息"
+    )
     group_basic.add_argument("--debug", default=settings.basic.debug, action="store_true", help="启用 debug 模式")
 
     # 资源选择
